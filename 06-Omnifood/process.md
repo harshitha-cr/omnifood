@@ -90,6 +90,7 @@ default: 1
 
 - Always begin with responsiveness in mind (PDF)
 - Use of rem, max-width, %, viewposrt relativeness etc.
+- Try segregating css designs based on diff components being styled & general reusable blocks (I'LL DO LATER for this one)
 
 # Hero section
 
@@ -143,5 +144,24 @@ transition: background-color 0.5s;
 
 ## Trick05
 
-- MAking one letter of different color(property)
+- Making one letter of different color(property)
 - Done by wrapping it in span element and styling it
+
+## Trick06
+
+- 1fr 1fr alone: Columns may not be equal if one column has content that can’t shrink.
+- minmax(0, 1fr): Tells the browser: “Don’t let content force the column to stay big — let it shrink to 0 if needed.”
+
+<details>
+  <summary>More details</summary>
+1fr 1fr splits leftover space, but doesn’t force equal widths if one column can’t shrink.
+
+By default, columns won’t shrink smaller than their content.
+
+So if one side has long text, it resists shrinking; the image gets squeezed.
+
+minmax(0, 1fr) allows both columns to shrink to zero if needed.
+
+Result: True equal columns, even with inflexible content.
+
+</details>
