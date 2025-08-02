@@ -165,3 +165,30 @@ minmax(0, 1fr) allows both columns to shrink to zero if needed.
 Result: True equal columns, even with inflexible content.
 
 </details>
+
+## Trick07
+
+- Always try to create reusable classes, like container (with width, centering, padding etc), grid sections.
+
+```css
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem 6.4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+```
+
+- If adding any visual styles, try doing it in css, the circles in How-It-Works section are done in css.
