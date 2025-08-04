@@ -132,6 +132,35 @@
 }
 
 /* ********************************************** */
+/* FEATURED IN SECTION */
+/* ********************************************** */
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  color: #888;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.featured-img-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.featured-img-container img {
+  height: 3rem;
+  filter: brightness(0%);
+  opacity: 0.5;
+}
+
+/* ********************************************** */
 /* HOW IT WORKS SECTION */
 /* ********************************************** */
 
@@ -157,6 +186,37 @@
   justify-content: center;
   /* otheriwse it'll stretch, as alignitems is stretch by default */
   align-items: center;
+
+  /* for the circles to get out of normal flow, this has to be the relative, for the before after pseudoelements to be absolutely positioned wrt this */
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  /* we should also make it positioned absolute  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* without content it wont appear on screen */
+  content: "";
+  display: block;
+  border-radius: 50%;
+}
+
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 50%;
+  padding-bottom: 50%;
+  background-color: #fae5d3;
+  z-index: -1;
 }
 
 .step-img {
