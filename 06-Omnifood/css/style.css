@@ -222,3 +222,105 @@
 .step-img {
   width: 35%;
 }
+
+/* ********************************************** */
+/* MEALS SECTION */
+/* ********************************************** */
+
+.section-meals {
+  margin: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0px 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  /* to avoid image from being sharp edged and overflowing from container */
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  /* moves closer to source, hence some changes */
+  box-shadow: 0px 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+/* .meal-text-box {
+  width: 60%;
+  margin: 0 auto;
+} */
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 100px;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-text-box {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.list {
+  font-size: 1.8rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-items {
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  /* done by gap of parent flex  */
+  /* margin-bottom: 1.8rem; */
+}
+
+.list-icon {
+  font-size: 3rem;
+  color: #e67e22;
+}
+
+.list-icon--small {
+  font-size: 2.4rem;
+}
+
+.all-recepies {
+  /* not adding this to link, so that i can create a standalone link class */
+  font-size: 1.8rem;
+  text-align: center;
+}

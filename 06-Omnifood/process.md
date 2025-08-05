@@ -91,6 +91,8 @@ default: 1
 - Always begin with responsiveness in mind (PDF)
 - Use of rem, max-width, %, viewposrt relativeness etc.
 - Try segregating css designs based on diff components being styled & general reusable blocks (I'LL DO LATER for this one)
+- Try creating standalone components in your page like links, buttons, list & their items. (It's al subjective ATEoD)
+- Basics for reusable UI components.
 
 # Hero section
 
@@ -192,3 +194,9 @@ Result: True equal columns, even with inflexible content.
 ```
 
 - If adding any visual styles, try doing it in css, the circles in How-It-Works section are done in css.
+
+## Trick08
+
+- Not really a trick, btw.
+- Useage of svg for icons(ex: heroicons) just clusters up the html doc if we are using a lot of icons.
+- Hence use a script that can give a unique html element to work on
