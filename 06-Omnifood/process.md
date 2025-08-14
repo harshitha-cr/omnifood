@@ -90,9 +90,13 @@ default: 1
 
 - Always begin with responsiveness in mind (PDF)
 - Use of rem, max-width, %, viewposrt relativeness etc.
-- Try segregating css designs based on diff components being styled & general reusable blocks (I'LL DO LATER for this one)
+- Try segregating css designs based on diff components being styled & general reusable blocks.
 - Try creating standalone components in your page like links, buttons, list & their items. (It's al subjective ATEoD)
 - Basics for reusable UI components.
+
+- finish inner then layout, well its just subjective atp.
+- always try checking the contrast ratios with coolors contrast checker
+- using aside tag for pricing inc taxes, stuff not that imp
 
 # Hero section
 
@@ -200,3 +204,106 @@ Result: True equal columns, even with inflexible content.
 - Not really a trick, btw.
 - Useage of svg for icons(ex: heroicons) just clusters up the html doc if we are using a lot of icons.
 - Hence use a script that can give a unique html element to work on
+
+---
+
+### Dump
+
+- its always better to make links (li elements or anything) to be inline-block.
+  for padding purpose
+- using end selector to ensure it always applies (increases specificity)
+
+- creating reusable classes, which can be used in any element to get desiarable ouptus.
+
+example: a container class, to be added on a container div, which can have:
+
+.container{
+max-width: 120rem;
+margin: 0 auto;
+padding: 0 3.2rem;
+}
+side-note: max-width is widely used as 1200px or 1140px,
+
+we used 1200px with a padding of 32px, hence main content is 1136px, similar to 1140px
+
+similarly a reuasble grid class can also be created with base properties in it. and specific classes with grid--2-cols, grid--3-cols etc can be made
+
+this coulve been added to the container of hero section, but usually, hear section should be a bit wider than rest i,e., 130rem.
+
+- using pseudo element to create those circles. pseudo elements insert a child element. pseudo elements cannot be added to img as creating childs for imgs is not allowed in HTML
+
+- when you want an empty content block, set width as some % and padding bottom to aome %, coz width and height togoether wont work on empty content
+
+- using filter property to greyout and reduce brightness of featured in images
+
+- not needed to put fixed sizes on images for meals sections,
+
+since grid divides spaces equally, having width as 100% for meals images would just be fine and actually good
+
+- another way to arrange list items without hussle, is by using the FLEX.
+
+change direction to column and done.
+
+alignitems - horizontal
+
+gap - margin-bottom
+
+- for box-shoadow, ideally only vertical shadow, with spread-radius dowble of it, then rgba for color
+
+- using overflow to avoid image being overflowen after we kept the border radius.
+  overflow: hidden;
+
+- using currentColor for same class styling, which creates consistency
+
+- for links (created by <a> tag)
+
+```css
+link:link,
+.link:visited {
+  //some properties
+}
+
+.link:hover,
+.link:active {
+  //some properties
+}
+```
+
+- for transitioning, if we remove the border during hover, it messes with the layout, hence use transperant border
+
+- can use hover on elements which are not links !
+
+- using transform: translateY(-1rem); translateY only goes in Y direction.
+
+- using figure elements as container for block of images or just images and also for testimonials and blockquote for their quotes
+
+- we can use figcaption element inside figure elements, which is req for images.
+
+- chaging cols from 1fr 1fr to 55fr 45fr equivalent to 1fr 0.8fr
+  keep in mind, align items are default stretch
+
+- we can use transform property with various values like rotate, scale, translate etc
+
+```css
+.class {
+  transform: rotate(45deg);
+  transform: translateX(-50, -50);
+  transform: scale(1.1);
+}
+
+//make sure use transition & overflow if required
+```
+
+- for the best value tag, we used transform rotate property & played around the values to find the right position
+
+- in the testimonials section, there are two grids as siblings (basically two child grid inside section-testimonials), hence we require a margin-bottom for them.
+  but by putting it to grid class, it will break prev arrangements.
+  hence remove margin-botton=m when for the grid which is the last child
+
+- or just use
+
+```css
+.grid:not(:last-child) {
+  //something
+}
+```
