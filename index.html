@@ -614,12 +614,13 @@
                 first meal is on us!
               </p>
 
-              <form action="#" class="cta-form">
+              <form action="#" class="cta-form" name="sign-up" netlify>
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
                     id="full-name"
                     type="text"
+                    name="full-name"
                     placeholder="Harshitha"
                     required
                   />
@@ -629,6 +630,7 @@
                   <label for="email">Email Address</label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="example@gmail.com"
                     required
@@ -637,7 +639,12 @@
 
                 <div>
                   <label for="select-where">Where did you hear about us?</label>
-                  <select name="select-where" id="select-where" required>
+                  <select
+                    name="select-where"
+                    id="select-where"
+                    name="select-where"
+                    required
+                  >
                     <option value="">Please select and option</option>
                     <option value="friends">Family & Friends</option>
                     <option value="youtube">YouTube Video</option>
