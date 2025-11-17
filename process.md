@@ -1,6 +1,9 @@
 Documenting the Omnifood Project steps, to look back when I start with black HTML page.
+///
+smooth scrolling and sticky nav left
+///
 
-> Refer to the course PDF, this md, and the code to understand well.
+> Refer to the PDF, this md, and the code to understand well.
 
 From PDF:
 
