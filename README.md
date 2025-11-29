@@ -4,4 +4,4 @@ A fully responsive, accessible landing page inspired by Omnifood.
 Built using HTML5, CSS3, and Vanilla JavaScript, focusing on clean UI design, responsive layouts, and reusable components.
 
 # Live Demo
-[Link](https://omni-food-web-page.netlify.app/)
+This is the link to my Omnifood Page: [OmniFood](https://omni-food-web-page.netlify.app/)
